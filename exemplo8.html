@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exemplo 8</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 1em;
+                position: relative;
+                height: 100vh;
+                overflow: auto;
+            }
+
+            .bg-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                background-image: url("https://thumbor.novaescola.org.br/QryauXh1QfK4Gk2oGQQ8kAaKaP4=/nova-escola-producao.s3.amazonaws.com/6qF4jU7VN4dWZASKCsVMvqwqanWGTThU78SvgSyrQqkQDw3AcDZTw79ByUwG/nebox09-ef1-img-thumb-03-jogos-6.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                opacity: 0.6;
+                z-index: -1;
+            }
+
+            h1 {
+                text-align: center;
+                color: blue;
+                font-size: 5vw;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                text-align: center;
+                font-size: 4vw;
+                color: blue;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .div1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 25px;
+                padding: 8px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                width: 90%;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: aquamarine;
+            }
+
+            input {
+                font-size: 4vw;
+                border-radius: 8px;
+                text-align: center;
+                color: blue;
+                background-color: bisque;
+            }
+
+            input::placeholder {
+                color: blue;
+                opacity: 1;
+                text-align: center;
+            }
+
+            .div2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 15px;
+                gap: 5vw;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            button {
+                color: blueviolet;
+                background-color: aquamarine;
+                border-radius: 15px;
+                font-size: 4vw;
+                cursor: grab;
+            }
+
+            .div3 {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: auto;
+               min-height: 200px;
+               padding: 10px;
+               width: 100%;
+            }
+
+            @media (max-width: 600px) {
+                h1, p, input, button {
+                    font-size: 5vw;
+                }
+
+                .div2 {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                }
+
+                .div1 {
+                    width: 100%;
+                    max-width: 90%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="bg-img"></div>
+
+        <h1 id="titulo">Bem vindo ao jogo do número secreto</h1>
+
+        <p id="textoA">Digite seu palpite abaixo!😜</p>
+
+        <div class="div1">
+            <input id="palpite" type="number" placeholder="Diga seu palpite">
+        </div>
+
+        <div class="div2">
+            <button onclick="verificarPalpite()">Verificar</button>
+            <button onclick="iniciarJogo()">Novo jogo</button>
+        </div>
+
+        <p id="textoB"></p>
+
+        <div id="imagem" class="div3"></div>
+
+        <script src="script/banana.js"></script>
+    </body>
+</html>
